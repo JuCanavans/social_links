@@ -7,8 +7,16 @@
     padding: 0;
 }
 
+:root{
+    --cor-fundo: linear-gradient(130deg, #1f1f1f, #333333);
+    --cor-primaria: #1f1f1f;
+    --cor-secundaria: #9fb85c;
+    --fonte-primaria: 'Protest Riot', sans-serif;
+    --fonre-secundaria: 'Oswald', sans-serif;
+}
+
 body{
-    background: linear-gradient(130deg, #1f1f1f, #333333);
+    background: var(--cor-fundo);
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -17,10 +25,12 @@ body{
 }
 
 .fomulario{
+    overflow: hidden;
+    align-items: center;
     width: 400px;
     margin: 15%;
     text-align: center;
-    background-color: #1f1f1f;
+    background-color: var(--cor-primaria);
     border-radius: 16px;
 }
 
@@ -51,22 +61,24 @@ body{
     padding-top: 15px;
     padding-bottom: 10px;
     letter-spacing: 5px;
-    font-family: 'Protest Riot', sans-serif;
+    font-family: var(--fonte-primaria);
 }
 
 .formulario-apresentacao-p{
-    font-family: 'Protest Riot', sans-serif;
-    color: #9fb85c;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
     text-align: center;
 }
 
 .formulario-apresentacao-p-2{
     color: white;
-    font-family: 'Protest Riot', sans-serif;
+    font-family: var(--fonte-primaria);
     text-align: center;
 }
 
 .apresentacao-links{
+    margin-left: 3em;
+    margin: 0.5em 3em 0em 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +87,7 @@ body{
 }
 
 .apresentacao-link{
-    width: 120px;
+    width: 100%;
     background-color: #333333;
     display: flex;
     justify-content: center;
@@ -93,7 +105,7 @@ body{
     padding: 18px;
     text-decoration: none;
     color: white;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--fonre-secundaria)
 }
 
 .apresentacao-link:before{
@@ -141,7 +153,7 @@ body{
     color: white;
     font-size: 18px;
     letter-spacing: 2px;
-    font-family: 'Protest Riot', sans-serif;
+    font-family: var(--fonte-primaria);
     text-align: center;
     padding: 10%;
 }
@@ -154,15 +166,15 @@ body{
 
 @keyframes animacao-borda {
     0% {
-        border-top: 2px solid #1f1f1f;
-        border-right: 2px solid #1f1f1f;
-        border-bottom: 2px solid #1f1f1f;
-        border-left: 2px solid #1f1f1f;
+        border-top: 2px solid var(--cor-primaria);
+        border-right: 2px solid var(--cor-primaria);
+        border-bottom: 2px solid var(--cor-primaria);
+        border-left: 2px solid var(--cor-primaria);
     }
     100% {
-        border-top: 2px solid #9fb85c;
-        border-right: 2px solid #9fb85c;
-        border-bottom: 2px solid #9fb85c;
-        border-left: 2px solid #9fb85c;
+        border-top: 2px solid var(--cor-secundaria);
+        border-right: 2px solid var(--cor-secundaria);
+        border-bottom: 2px solid var(--cor-secundaria);
+        border-left: 2px solid var(--cor-secundaria);
     }
   }
