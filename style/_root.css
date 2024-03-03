@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+
+:root{
+    --cor-body: #141414;
+    --cor-fundo: linear-gradient(130deg, #1f1f1f, #333333);
+    --cor-primaria: #1f1f1f;
+    --cor-secundaria: #9fb85c;
+    --fonte-primaria: 'Protest Riot', sans-serif;
+    --fonre-secundaria: 'Oswald', sans-serif;
+}

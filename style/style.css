@@ -1,34 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+@import url("../style/_root.css");
 
 *{
     margin: 0;
     padding: 0;
 }
 
-:root{
-    --cor-fundo: linear-gradient(130deg, #1f1f1f, #333333);
-    --cor-primaria: #1f1f1f;
-    --cor-secundaria: #9fb85c;
-    --fonte-primaria: 'Protest Riot', sans-serif;
-    --fonre-secundaria: 'Oswald', sans-serif;
-}
-
 body{
-    background: var(--cor-fundo);
+    background: var(--cor-body);
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.secao_dark_mode{
+    padding-bottom: 3.5em;
+    display: inline-flex;
+    column-gap: 1.5em;
+}
+
+.secao_dark_mode img{
+    width: 30px;
+}
+
+/* toggle */
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    align-self: center;
+    background: var(--cor-fundo);
+    border-radius: 1.6rem;
+    width: 5rem;
+    height: 2.3rem;
+    position: relative;
+    vertical-align: middle;
+}
+
+.toggle-switch:before, .toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+    background: #443c3c;
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 3rem;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+/*fim checkbok*/
+
 .fomulario{
     overflow: hidden;
     align-items: center;
     width: 400px;
-    margin: 15%;
     text-align: center;
     background-color: var(--cor-primaria);
     border-radius: 16px;
@@ -40,7 +97,7 @@ body{
 
 .foto-principal{
     position: relative;
-    animation: animacao-borda 2s infinite alternate-reverse;
+    animation: animacao-borda 2s infinite alternate-reverse; /*mudar para cor base fundo e formuario*/
     margin: 15px;
     width: 120px;
     border-radius: 90px;
@@ -177,4 +234,44 @@ body{
         border-bottom: 2px solid var(--cor-secundaria);
         border-left: 2px solid var(--cor-secundaria);
     }
-  }
+}
+
+
+@keyframes animacao-borda_clear_mode {
+    0% {
+        border-top: 2px solid #eee;
+        border-right: 2px solid #eee;
+        border-bottom: 2px solid #eee;
+        border-left: 2px solid #eee;
+    }
+    100% {
+        border-top: 2px solid #443c3c;
+        border-right: 2px solid #443c3c;
+        border-bottom: 2px solid #443c3c;
+        border-left: 2px solid #443c3c;
+    }
+}
+
+/*modo claro usar script*/
+
+.clear_mode{
+    background-color: #eee;
+}
+
+.formulario_clear_mode{
+    background-color: #443c3c;
+}
+
+.apresentacao-link_clear_mode{
+    color: black;
+}
+
+.apresentacao-link_clear_mode::after{
+    background-color: #eee;
+}
+
+.foto-principal_clear_mode{
+    animation: animacao-borda_clear_mode 2s infinite alternate-reverse;
+}
+
+/*fim modo clear mode*/
