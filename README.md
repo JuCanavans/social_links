@@ -1,7 +1,6 @@
 # <h1 align="center">Social Links</h1>
 
-![modelo_v0 2](https://github.com/JuCanavans/social_links/assets/103950621/ae5a7884-a1b3-41eb-886c-6e38af668af3)
-
+![Atualização_JS](https://github.com/JuCanavans/social_links/assets/103950621/956a3528-6d6c-4bdb-b617-3a11b5be9b81)
 
 ## 🛠 Technologies Used
 ![html](https://github.com/JuCanavans/carta_de_aniversario/assets/103950621/26d205cf-94be-4681-bb60-0a2f686f62b1)
